@@ -32,6 +32,11 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
+.chakra-petch-regular {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 main {
   display: block;
@@ -43,39 +48,10 @@ main {
  */
 
 h1 {
-      display: block;
-    font-size: 2em;
     font-weight: bold;
 }
-.robo-block{
-font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-.box {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #333;
-    font-size: 20px;
-}
 
-@keyframes fadein {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
-.fadein {
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
-    animation-fill-mode: both;
-    animation-name: astroFadeIn;
-}
 /* Grouping content
    ========================================================================== */
 
@@ -110,6 +86,7 @@ pre {
 a {
   background-color: transparent;
   color:white;
+  text-decoration: none;
 
 }
 a:visited {
@@ -197,6 +174,10 @@ sup {
 
 img {
   border-style: none;
+  height: 12.5%;
+  width: 12.5%;
+  border-radius: 50%; /* 画像を丸くする */
+  object-fit: cover;  /* 画像の縦横比を維持して表示範囲を調整する */
 }
 
 /* Forms
