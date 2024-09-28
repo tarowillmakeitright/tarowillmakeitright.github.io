@@ -47,7 +47,11 @@ h1 {
     font-size: 2em;
     font-weight: bold;
 }
-
+.robo-block{
+font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 .box {
     margin: 20px;
     padding: 20px;
@@ -105,8 +109,24 @@ pre {
 
 a {
   background-color: transparent;
-}
+  color:white;
 
+}
+a:visited {
+  background-color: transparent;
+  color:white;
+
+}
+a:hover {
+  background-color: transparent;
+  color:white;
+
+}
+a:active {
+  background-color: transparent;
+  color:white;
+
+}
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
