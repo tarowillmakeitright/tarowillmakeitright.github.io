@@ -43,6 +43,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: white;
 }
 
 .container{
@@ -56,8 +57,8 @@ min-width: 100%;
 }
 
 .profile-image {
-  width: 25vw; /* 幅を画面の50%に設定 */
-  height: 25vw;
+  width: 12.5vw; /* 幅を画面の50%に設定 */
+  height: 12.5vw;
   border-radius: 50%; /* 円形にする */
   object-fit: cover; /* アスペクト比を維持 */
 }
