@@ -32,6 +32,11 @@ body {
 /**
  * Render the `main` element consistently in IE.
  */
+.chakra-petch-regular {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 main {
   display: block;
@@ -46,16 +51,6 @@ h1 {
     font-weight: bold;
 }
 
-@keyframes fadein {
-    0% {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 /* Grouping content
    ========================================================================== */
@@ -179,6 +174,10 @@ sup {
 
 img {
   border-style: none;
+  height: 12.5%;
+  width: 12.5%;
+  border-radius: 50%; /* 画像を丸くする */
+  object-fit: cover;  /* 画像の縦横比を維持して表示範囲を調整する */
 }
 
 /* Forms
