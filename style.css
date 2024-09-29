@@ -69,8 +69,9 @@ min-width: 100%;
             }
             .links a {
                 font-size: 20px; /* リンクテキストのフォントサイズを調整 */
-
+                color: #007bff;
             }
+          }
 
 main {
   display: block;
@@ -99,10 +100,6 @@ hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2
   color: white; 
   font-size: 24px;
   text-decoration: none;
-  background-color: #00FF00;
-}
-.links a:visited {
-  color: white;
 }
 .links a:any-link:hover {
   background-color: #00FF00;
