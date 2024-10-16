@@ -36,17 +36,16 @@ body {
   background-color: black; /* 背景色を指定 */
 }
 
-/* Dark mode styles */
+/* Light mode styles */
 body.light-mode {
-      background-color: #ffffff;
-          color: #333333;
-        }
+    background-color: white;
+    color: black;
+}
 
 button.light-mode {
-      background-color: #000000;
-          color: #ffffff;
-          }
-/**
+    background-color: black;
+    color: white;
+}
  * Render the `main` element consistently in IE.
  */
 .chakra-petch-regular {
