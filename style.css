@@ -36,17 +36,6 @@ body {
   background-color: black; /* 背景色を指定 */
 }
 
-/* Light mode styles */
-body.light-mode {
-    background-color: white;
-    color: black;
-}
-
-button.light-mode {
-    background-color: black;
-    color: white;
-}
-
 .chakra-petch-regular {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
