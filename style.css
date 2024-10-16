@@ -46,8 +46,7 @@ button.light-mode {
     background-color: black;
     color: white;
 }
- * Render the `main` element consistently in IE.
- */
+
 .chakra-petch-regular {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
