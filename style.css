@@ -36,6 +36,16 @@ body {
   background-color: black; /* 背景色を指定 */
 }
 
+/* Dark mode styles */
+body.light-mode {
+      background-color: #ffffff;
+          color: #333333;
+        }
+
+button.light-mode {
+      background-color: #000000;
+          color: #ffffff;
+          }
 /**
  * Render the `main` element consistently in IE.
  */

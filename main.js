@@ -28,3 +28,15 @@ function calculateTimeSince() {
 const timeSince = calculateTimeSince();
 document.getElementById('countDown').textContent = 
     `${timeSince.years} years, ${timeSince.months} months, and ${timeSince.days} days.`;
+
+// Get the button element
+const toggleButton = document.getElementById('modeToggle');
+
+// Add event listener for the button click
+toggleButton.addEventListener('click', function() {
+    // Toggle the dark-mode class on the body
+    document.body.classList.toggle('light-mode');
+
+    // Toggle the dark-mode class on the button to change its style
+    toggleButton.classList.toggle('light-mode');
+});
