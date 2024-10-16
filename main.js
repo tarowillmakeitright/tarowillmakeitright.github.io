@@ -1,14 +1,30 @@
 // Starting date: November 1st, 2022
-const startDate = new Date('2022-11-01');
+const startDate = new Date('2022-11-01T00:00:00');
 
 // Function to calculate the difference between the start date and today
-function calculateDaysSince() {
+function calculateTimeSince() {
     const today = new Date();
-    const timeDifference = today - startDate; // difference in milliseconds
-    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24)); // convert to days
+    
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+    let days = today.getDate() - startDate.getDate();
 
-    return daysDifference;
+    // Adjust if negative days or months
+    if (days < 0) {
+        months -= 1;
+        const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0); // Last day of previous month
+        days += previousMonth.getDate();
+    }
+    
+    if (months < 0) {
+        years -= 1;
+        months += 12;
+    }
+
+    return { years, months, days };
 }
 
 // Display the result
-document.getElementById('countDown').textContent = `${calculateDaysSince()} days`;
+const timeSince = calculateTimeSince();
+document.getElementById('countDown').textContent = 
+    `${timeSince.years} years, ${timeSince.months} months, and ${timeSince.days} days.`;
