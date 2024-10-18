@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>aboout</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-<!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container text-center">
@@ -116,12 +117,46 @@
       </div>
     </div>
   </div>
-  <p>I've been as a System Engineer for <br><span id="countDown"></span></p>
+  <p>I've been working as a System Engineer for <br><span id="countDown"></span></p>
       <div class="chakra-petch-regular links">
         <a href="https://tarowillmakeitright.github.io/"><p style="color:blue";>home</p></a>
       </div>
+      <button id="themeToggle" class="btn btn-secondary">🔦</button>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Bootstrap 5.3 JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>
+<script>
+/// Starting date: November 1st, 2022
+const startDate = new Date('2022-11-01T00:00:00');
+
+/ Function to calculate the difference between the start date and today
+function calculateTimeSince() {
+    const today = new Date();
+    
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+    let days = today.getDate() - startDate.getDate();
+
+    // Adjust if negative days or months
+    if (days < 0) {
+        months -= 1;
+        const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0); // Last day of previous month
+        days += previousMonth.getDate();
+    }
+    
+    if (months < 0) {
+        years -= 1;
+        months += 12;
+    }
+
+    return { years, months, days };
+}
+
+// Display the result
+const timeSince = calculateTimeSince();
+document.getElementById('countDown').textContent = `${timeSince.years} years, ${timeSince.months} months, and ${timeSince.days} days.`;
+</script>
+
 </body>
 </html>

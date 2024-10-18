@@ -1,42 +1,30 @@
-// Starting date: November 1st, 2022
-const startDate = new Date('2022-11-01T00:00:00');
+/**Toggle Theme Button **/
+    const getStoredTheme = () => localStorage.getItem('theme');
+    const setStoredTheme = theme => localStorage.setItem('theme', theme);
 
-// Function to calculate the difference between the start date and today
-function calculateTimeSince() {
-    const today = new Date();
-    
-    let years = today.getFullYear() - startDate.getFullYear();
-    let months = today.getMonth() - startDate.getMonth();
-    let days = today.getDate() - startDate.getDate();
+    const getPreferredTheme = () => {
+              const storedTheme = getStoredTheme();
+              if (storedTheme) {
+                            return storedTheme;
+                        }
+              return 'light'; // Default to light theme
+          };
 
-    // Adjust if negative days or months
-    if (days < 0) {
-        months -= 1;
-        const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0); // Last day of previous month
-        days += previousMonth.getDate();
-    }
-    
-    if (months < 0) {
-        years -= 1;
-        months += 12;
-    }
+    const setTheme = theme => {
+              document.documentElement.setAttribute('data-bs-theme', theme);
+          };
 
-    return { years, months, days };
-}
+    const toggleTheme = () => {
+              const currentTheme = getStoredTheme() || getPreferredTheme();
+              const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+              setStoredTheme(newTheme);
+              setTheme(newTheme);
+          };
 
-// Display the result
-const timeSince = calculateTimeSince();
-document.getElementById('countDown').textContent = 
-    `${timeSince.years} years, ${timeSince.months} months, and ${timeSince.days} days.`;
+    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
 
-// Get the button element
-const toggleButton = document.getElementById('modeToggle');
+    window.addEventListener('DOMContentLoaded', () => {
+              const preferredTheme = getPreferredTheme();
+              setTheme(preferredTheme);
+          })
 
-// Add event listener for the button click
-toggleButton.addEventListener('click', function() {
-    // Toggle the dark-mode class on the body
-    document.body.classList.toggle('light-mode');
-
-    // Toggle the dark-mode class on the button to change its style
-    toggleButton.classList.toggle('light-mode');
-});

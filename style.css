@@ -14,7 +14,6 @@ html {
   line-height: 1.15; /* 1 */
   height: 100%; /* body と html の高さを100%に設定 */
   width: 100%;  /* body と html の幅を100%に設定 */
-  background-color: black; /* 背景色を指定 */
   margin:0;
 }
 
@@ -26,21 +25,26 @@ html {
  */
 
 body {  
-   margin: 0;
+  margin: 0;
   padding: 0;
-  color: white;
   text-align:center;
   justify-content: center;
-   height: 100%; /* body と html の高さを100%に設定 */
+  height: 100%; /* body と html の高さを100%に設定 */
   width: 100%;  /* body と html の幅を100%に設定 */
-  background-color: black; /* 背景色を指定 */
 }
 
+[data-bs-theme="dark"] {
+  background-color: #121212;
+  color: white;
+}
+[data-bs-theme="light"] {
+  background-color: white;
+  color: black;
+}
 .chakra-petch-regular {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: white;
 }
 
 .container{
@@ -50,7 +54,6 @@ min-width: 100%;
   flex-direction: column;
   justify-content: center; /* 垂直方向に中央揃え */
   align-items: center;     /* 水平方向に中央揃え */
-  background-color: black;
 }
 
 .profile-image {
@@ -66,7 +69,6 @@ min-width: 100%;
             }
             .links a {
                 font-size: 20px; /* リンクテキストのフォントサイズを調整 */
-                color: #007bff;
             }
           }
 
@@ -94,13 +96,11 @@ h1 {
 hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ } /** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */ pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ } /* Text-level semantics ========================================================================== */ /** Remove the gray background on active links in IE 10. */
 
 .links a { 
-  color: white; 
   font-size: 24px;
   text-decoration: none;
 }
 .links a:any-link:hover {
   background-color: #00FF00;
-  color: white;
 }
 /**
  * 1. Remove the bottom border in Chrome 57-
