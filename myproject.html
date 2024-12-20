@@ -55,6 +55,27 @@ body {
         .btn-secondary {
             font-size: 1.2rem;
         }
+        /* モーダル内の画像を調整 */
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* モーダルの幅をモバイル向けに調整 */
+        @media (max-width: 768px) {
+            .modal-lg {
+                max-width: 95%;
+            }
+        }
+
+        /* スクロールを防止 */
+        .modal-dialog {
+            max-height: calc(100vh - 1rem);
+            margin: auto;
+        }
+        .modal-content {
+            overflow-y: auto;
+        }
         </style>
     </head>
     <body>
