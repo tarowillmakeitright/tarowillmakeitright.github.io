@@ -66,93 +66,176 @@ body {
 
             <div class="row">
                 <!-- Project Card 1 -->
+                <!-- Existing Project Card -->
                 <div class="col-md-4 mb-4">
                     <div class="project-card bg-light text-center">
                         <div class="project-image">
-                            <img src="https://github.com/tarowillmakeitright/htmxSBEcommerce/raw/main/images/progress11.png" alt="Anime DB Modern">
+                            <img src="./img/moderntech/userFavoriteAnime.jpg" 
+                                 alt="Anime DB Modern" 
+                                 data-bs-toggle="modal" 
+                                 data-bs-target="#imageModal"
+                                 data-slide-index="0">
                         </div>
                         <div class="project-content">
-                            <a href="https://github.com/tarowillmakeitright/htmxSBEcommerce">
-                                <h2 class="h5">Anime DB using modern tech</h2>
+                            <a href="https://github.com/tarowillmakeitright/htmxSBEcommerce/">
+                                <h2 class="h5">Anime DB (Modern tech)</h2>
                                 <p class="text-muted">Spring Boot, Thymeleaf, Bootstrap</p>
                             </a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Modal Structure -->
+                <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Anime DB (Modern tech)</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Carousel -->
+                                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="./img/moderntech/favoriteButton.jpg" class="d-block w-100" alt="Anime DB Modern">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/moderntech/userFavoriteAnime.jpg" class="d-block w-100" alt="Anime DB Classic">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/moderntech/rightSideOffCanvas.jpg" class="d-block w-100" alt="Astro Blog">
+                                        </div>
+                                         <div class="carousel-item">
+                                            <img src="./img/moderntech/homepage.jpg" class="d-block w-100" alt="Astro Blog">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"</span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
                 <!-- Project Card 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="project-card bg-light text-center">
                         <div class="project-image">
-                            <img src="https://media.licdn.com/dms/image/v2/D562DAQEUnRY4TvV82g/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1729218881679?e=1735200000&v=beta&t=l1SLbTi5gE8-3EoBV1fhlWhIMr8kBg8Fs_zmF34Oc0Y" alt="Anime DB Classic">
+                            <img src="./img/oldFashionedtech/AllAnimeList.jpg" 
+                                 alt="Anime DB Old Fashioned" 
+                                 data-bs-toggle="modal" 
+                                 data-bs-target="#imageModal2"
+                                 data-slide-index="0">
                         </div>
                         <div class="project-content">
                             <a href="https://github.com/tarowillmakeitright/animeDB">
-                                <h2 class="h5">Anime DB using old-fashioned tech</h2>
+                                <h2 class="h5">Anime DB (Old Fashioned Tech)</h2>
                                 <p class="text-muted">Java, JSP, Bootstrap</p>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
+                <!-- Modal Structure -->
+                <div class="modal fade" id="imageModal2" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Anime DB (Old Fashioned Tech)</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Carousel -->
+                                <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="./img/oldFashionedtech/AllAnimeList.jpg" class="d-block w-100" alt="All anime list">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/oldFashionedtech/ASelectedAnime.jpg" class="d-block w-100" alt="A selected Anime">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/oldFashionedtech/ASelectedAnime2jpg.jpg" class="d-block w-100" alt="A Selected Anime">
+                                        </div>
+                                         <div class="carousel-item">
+                                            <img src="./img/oldFashionedtech/eachRowHas4Anime.jpg" class="d-block w-100" alt="Each row has 4 anime">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+ <!-- Project Card 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="project-card bg-light text-center">
                         <div class="project-image">
-                            <img src="https://via.placeholder.com/300x200?text=Astro+Blog" alt="Astro Blog">
+                            <img src="./img/blog/BlogList.jpg" 
+                                 alt="Anime DB Old Fashioned" 
+                                 data-bs-toggle="modal" 
+                                 data-bs-target="#imageModal3"
+                                 data-slide-index="0">
                         </div>
                         <div class="project-content">
-                            <a href="https://github.com/tarowillmakeitright/AstroBlog">
-                                <h2 class="h5">Blog</h2>
-                                <p class="text-muted">Astropaper. I note what I've learned</p>
+                            <a href="https://github.com/tarowillmakeitright/animeDB">
+                                <h2 class="h5">Blog (AstroPaper)</h2>
+                                <p class="text-muted">I note what I've learned</p>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
-                <!-- Project Card 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="project-card bg-light text-center">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/300x200?text=Portfolio" alt="Portfolio">
-                        </div>
-                        <div class="project-content">
-                            <a href="https://github.com/tarowillmakeitright/tarowillmakeitright">
-                                <h2 class="h5">Portfolio</h2>
-                                <p class="text-muted">A collection of my work and projects.</p>
-                            </a>
+                <!-- Modal Structure -->
+                <div class="modal fade" id="imageModal3" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="imageModalLabel">Blog (Astropapper) I note what I've learned</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Carousel -->
+                                <div id="carouselExample3" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="./img/blog/BlogList.jpg" class="d-block w-100" alt="BLog List">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/blog/ABlog.jpg" class="d-block w-100" alt="A Blog">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./img/blog/tags.jpg" class="d-block w-100" alt="Blog Tags">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 mb-4">
-                    <div class="project-card bg-light text-center">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/300x200?text=Project+5" alt="Project 5">
-                        </div>
-                        <div class="project-content">
-                            <h2 class="h5">Project Title 5</h2>
-                            <p class="text-muted">A brief description of the project goes here.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="project-card bg-light text-center">
-                        <div class="project-image">
-                            <img src="https://via.placeholder.com/300x200?text=Project+6" alt="Project 6">
-                        </div>
-                        <div class="project-content">
-                            <h2 class="h5">Project Title 6</h2>
-                            <p class="text-muted">A brief description of the project goes here.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="centered-content">
+                <div class="centered-content">
                 <div class="chakra-petch-regular links">
                     <a href="https://tarowillmakeitright.github.io/">home</a>
                 </div>
@@ -160,5 +243,6 @@ body {
             </div>
         </main>
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
